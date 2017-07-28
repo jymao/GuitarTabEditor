@@ -3,8 +3,6 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.io.File;
 import java.net.URL;
 
@@ -19,6 +17,9 @@ public class ViewPanel extends JPanel implements ActionListener{
 
 	private Thread thread; //new thread for playing notes
 	private final JFileChooser fileChooser = new JFileChooser();
+	
+	//not used
+	static final long serialVersionUID = 2;
 	
 	public ViewPanel()
 	{
@@ -268,7 +269,7 @@ public class ViewPanel extends JPanel implements ActionListener{
 			{
 				int fileResponse = fileChooser.showOpenDialog(Main.frame);
 				
-				if(fileResponse == fileChooser.APPROVE_OPTION)
+				if(fileResponse == JFileChooser.APPROVE_OPTION)
 				{
 					File file = fileChooser.getSelectedFile();
 					
@@ -294,7 +295,7 @@ public class ViewPanel extends JPanel implements ActionListener{
 		{
 			int fileResponse = fileChooser.showSaveDialog(Main.frame);
 			
-			if(fileResponse == fileChooser.APPROVE_OPTION)
+			if(fileResponse == JFileChooser.APPROVE_OPTION)
 			{
 				File file = fileChooser.getSelectedFile();
 

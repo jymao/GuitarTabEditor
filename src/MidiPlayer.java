@@ -21,10 +21,6 @@ public class MidiPlayer {
 	private long note16Time;
 	private long note32Time;
 	
-	//Common time for initial time signature
-	private int timeSigTop = 4;
-	private NoteValue timeSigBot = NoteValue.Quarter;
-	
 	//standard tuned strings, from string 1 to 6
 	private String[] guitarStrings = {"E4", "B3", "G3", "D3", "A2", "E2"};
 	//Base midi number of notes
