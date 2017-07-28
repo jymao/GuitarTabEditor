@@ -160,6 +160,7 @@ public class FileHandler {
 				//bpm
 				String[] parts = lines[0].split(" ");
 				model.setBPM(Integer.parseInt(parts[2]));
+				Main.midiPlayer.setBPM(Integer.parseInt(parts[2]));
 				
 				//tuning
 				parts = lines[2].split(" ");
